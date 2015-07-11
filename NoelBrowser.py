@@ -7,11 +7,15 @@ class WebBrowser(gtk.Window):
     def __init__(self):
         super(WebBrowser, self).__init__()
 
-        self.set_title("15-18 browser")
+        self.set_title("NoelBrowser")
         self.modify_bg(gtk.STATE_NORMAL, gtk.gdk.Color(16800, 16800, 16920))
         self.set_position(gtk.WIN_POS_CENTER)
         self.connect("destroy", gtk.main_quit)
         self.set_size_request(1024, 768)
+         
+        self.set_icon_from_file(("noel.png")) #icone noel :noel:
+
+        
 
         self.initialize_components()
         self.show_all()
